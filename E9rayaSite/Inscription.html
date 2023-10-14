@@ -188,8 +188,11 @@
                 reply_to: title,
             }).then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                alert("Merci pour votre temps, nous vous contacterons dans les plus brefs délais.");
+                document.location.href="Landing-Page.html"; 
             }, function (error) {
-                console.log('FAILED...', error);
+                alert("Nous rencontrons un problème technique sur notre site, merci de réessayer ultérieurement.");
+                document.location.href="Inscription.html"; 
             });;
         }
     </script>
