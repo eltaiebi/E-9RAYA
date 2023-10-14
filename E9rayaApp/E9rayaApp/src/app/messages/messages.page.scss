@@ -1,0 +1,17 @@
+.message-textarea {
+    max-height: 100px;
+    --background: trasparent;
+    --padding-top: 10px;
+    --padding-end: 10px;
+    --padding-bottom: 10px;
+    --padding-start: 10px;
+  }
+  
+  .message-send-button {
+    --background: var(--ion-color-light);
+  
+  }
+//   textarea{
+//     border-radius: 18px;
+
+//   }

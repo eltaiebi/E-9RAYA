@@ -1,0 +1,59 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="''" color="primary" defaultHref="/contact"></ion-back-button>
+    </ion-buttons>
+    <ion-item lines="none" style="--background: transparent">
+      <ion-avatar slot="start">
+        <img src="../../assets/icon/gamer.png" />
+      </ion-avatar>
+      <ion-label class="ion-no-margin">
+        EL TAIEBI Oussama
+        <p class="ion-no-margin">GGGGGGG</p>
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content
+  [fullscreen]="true"
+  [scrollEvents]="true"
+  [scrollY]="true"
+>
+  <ion-item-group class="messages-item-group">
+    <!-- Date message divider -->
+    <app-message-divider > </app-message-divider>
+
+    <ion-item-sliding
+      class="message-item-sliding"
+      #slidingItem
+    >
+      <!-- User message -->
+      <app-user-message>
+      </app-user-message>
+
+      <!-- My message -->
+      <app-my-message>
+      </app-my-message>
+
+      <!-- Reply slide -->
+      <ion-item-options side="end" class="no-border">
+        <ion-item-option disabled style="--background: var(--ion-item-background)">
+          <ion-icon slot="icon-only" name="arrow-undo-outline" color="primary"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-item-group>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="height: auto; max-height: 100px;">
+    <ion-textarea rows="1" cols="10" placeholder="message" class="message-textarea"></ion-textarea>
+    <ion-buttons slot="end" class="message-send-button" (click)="add()">
+      <ion-button >
+        <ion-icon slot="icon-only" name="send-outline" color="primary" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>   
+</ion-footer>

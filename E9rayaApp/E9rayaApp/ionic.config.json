@@ -1,0 +1,7 @@
+{
+  "name": "E9rayaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
