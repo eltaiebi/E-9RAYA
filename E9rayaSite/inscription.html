@@ -3,11 +3,13 @@
 
 <head>
     <title>E-9raya - Formulaire de contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
-        </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+    </script>
     <style>
         html,
         body {
@@ -117,7 +119,7 @@
             margin: 6px 0;
         }
 
-        @media (min-width: 568px) {
+        @media (min-width: 700px) {
             .info {
                 flex-flow: row wrap;
                 justify-content: space-between;
@@ -130,6 +132,7 @@
 
         th,
         td {
+            font-size: 14px;
             border-bottom: 1px solid #ccc;
             text-align: center;
             vertical-align: unset;
@@ -160,7 +163,7 @@
         function envoyer(event) {
             event.preventDefault();
             (function () {
-                emailjs.init("Ednd4UsofRjGWe08u"); 
+                emailjs.init("Ednd4UsofRjGWe08u");
             })();
             let champs = document.querySelectorAll('[id^="send"]');
             let title = "";
@@ -179,7 +182,7 @@
                 }
 
             });
-            
+
             console.log(title)
             console.log(str)
             emailjs.send("service_ksizq56", "template_cgn8q1q", {
@@ -190,10 +193,10 @@
             }).then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert("Merci pour votre temps, nous vous contacterons dans les plus brefs délais.");
-                document.location.href="Landing-Page.html"; 
+                document.location.href = "Landing-Page.html";
             }, function (error) {
                 alert("Nous rencontrons un problème technique sur notre site, merci de réessayer ultérieurement.");
-                document.location.href="inscription.html"; 
+                document.location.href = "inscription.html";
             });;
         }
     </script>
