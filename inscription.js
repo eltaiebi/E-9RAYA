@@ -26,6 +26,6 @@ function envoyer(event) {
         document.location.href = "Landing-Page.html";
     }, function (error) {
         alert("Nous rencontrons un problème technique sur notre site, merci de réessayer ultérieurement.");
-        document.location.href = "E9rayaSite/inscription.html";
+        document.location.href = "inscription.html";
     });;
 }
